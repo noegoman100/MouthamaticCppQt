@@ -9,11 +9,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
     //Required Qt stuff
     ui->setupUi(this);
+    //dialogConverter = new DialogConverter();
 
     //Uses global dbConnection object, and tries to connect to the database.
     //g_dbConnection returns a boolean, base on db.open()
     //Placed here in the constructor to happen automatically on window creation.
-    if(g_dbConnection.connect()) {
+    //if(g_dbConnection.connect()) { //Uncomment me to connect to database.
+    if(1==0){ //TEMP
         QMessageBox::information(this, "Connection", "Database Connected");
     } else {
         QMessageBox::information(this, "Not Connected", "Database Not Connected");
@@ -48,13 +50,22 @@ void MainWindow::on_sendQueryButton_clicked()
     }
 }
 
-void MainWindow::on_sentenceParserButton_clicked()
+void MainWindow::on_convertDialogButton_clicked()
 {
     QString rawSentence = "This is a raw sentence";
-    SentenceParser sentenceParser;
-    std::vector<Word> newWordVector = sentenceParser.parse(rawSentence);
-    for(auto& value: newWordVector){
-        qDebug() << value.wordName;
+
+    qDebug() << "convertDialogButton clicked, with input: " << ui->rawSentenceLineEdit->text();
+    rawSentence = ui->rawSentenceLineEdit->text();
+
+    std::vector<Word> convertedDialog = dialogConverter->convert(rawSentence);
+    for (auto& value: convertedDialog){
+        qDebug() << "Word Name: " << value.wordName;
+        for (auto& subValue1: value.symbols){
+            qDebug() << "Symbols: " << subValue1;
+        }
+        for (auto& subValue2: value.imageUrl){
+            qDebug() << "imageUrls: " << subValue2;
+        }
     }
 
 }

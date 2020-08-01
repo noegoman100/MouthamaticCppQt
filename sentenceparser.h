@@ -13,7 +13,7 @@ class SentenceParser
 {
 public:
     SentenceParser();
-    std::vector<Word> parse(QString &rawSentence);
+    std::vector<Word> parse(QString rawSentence);
 };
 
 #endif // SENTENCEPARSER_H

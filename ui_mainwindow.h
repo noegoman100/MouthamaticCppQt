@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
@@ -26,7 +27,8 @@ public:
     QLabel *label;
     QPushButton *exitButton;
     QPushButton *sendQueryButton;
-    QPushButton *sentenceParserButton;
+    QPushButton *convertDialogButton;
+    QLineEdit *rawSentenceLineEdit;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -38,16 +40,19 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(60, 50, 81, 16));
+        label->setGeometry(QRect(710, 560, 81, 16));
         exitButton = new QPushButton(centralwidget);
         exitButton->setObjectName(QString::fromUtf8("exitButton"));
-        exitButton->setGeometry(QRect(50, 120, 75, 23));
+        exitButton->setGeometry(QRect(710, 530, 75, 23));
         sendQueryButton = new QPushButton(centralwidget);
         sendQueryButton->setObjectName(QString::fromUtf8("sendQueryButton"));
-        sendQueryButton->setGeometry(QRect(250, 180, 75, 23));
-        sentenceParserButton = new QPushButton(centralwidget);
-        sentenceParserButton->setObjectName(QString::fromUtf8("sentenceParserButton"));
-        sentenceParserButton->setGeometry(QRect(250, 250, 141, 23));
+        sendQueryButton->setGeometry(QRect(710, 490, 75, 23));
+        convertDialogButton = new QPushButton(centralwidget);
+        convertDialogButton->setObjectName(QString::fromUtf8("convertDialogButton"));
+        convertDialogButton->setGeometry(QRect(280, 50, 141, 23));
+        rawSentenceLineEdit = new QLineEdit(centralwidget);
+        rawSentenceLineEdit->setObjectName(QString::fromUtf8("rawSentenceLineEdit"));
+        rawSentenceLineEdit->setGeometry(QRect(20, 10, 401, 20));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -64,7 +69,7 @@ public:
         label->setText(QCoreApplication::translate("MainWindow", "Hello World!", nullptr));
         exitButton->setText(QCoreApplication::translate("MainWindow", "Exit Button", nullptr));
         sendQueryButton->setText(QCoreApplication::translate("MainWindow", "Send Query", nullptr));
-        sentenceParserButton->setText(QCoreApplication::translate("MainWindow", "Sentence Parser", nullptr));
+        convertDialogButton->setText(QCoreApplication::translate("MainWindow", "Convert Dialog", nullptr));
     } // retranslateUi
 
 };

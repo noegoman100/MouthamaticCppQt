@@ -5,9 +5,12 @@
 #include <QtSql>
 #include <QSqlDatabase>
 #include <QMessageBox>
+#include <QLineEdit>
+#include <QImage>
 
 #include "sentenceparser.h"
 #include "global.h"
+#include "dialogconverter.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,9 +29,10 @@ private slots:
 
     void on_sendQueryButton_clicked();
 
-    void on_sentenceParserButton_clicked();
+    void on_convertDialogButton_clicked();
 
 private:
     Ui::MainWindow *ui;
+    DialogConverter* dialogConverter = new DialogConverter();
 };
 #endif // MAINWINDOW_H

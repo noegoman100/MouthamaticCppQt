@@ -266,6 +266,7 @@ Makefile: MouthamaticCpp.pro ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mksp
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mkspecs\features\qt_config.prf \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mkspecs\win32-msvc\qmake.conf \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mkspecs\features\spec_post.prf \
+		.qmake.stash \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mkspecs\features\exclusive_builds.prf \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mkspecs\common\msvc-version.conf \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mkspecs\features\toolchain.prf \
@@ -296,7 +297,6 @@ Makefile: MouthamaticCpp.pro ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mksp
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\lib\Qt5Sql.prl \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\lib\Qt5Core.prl \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\lib\qtmain.prl \
-		.qmake.stash \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mkspecs\features\build_pass.prf \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\lib\Qt5Widgetsd.prl \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\lib\Qt5Guid.prl \
@@ -486,6 +486,7 @@ Makefile: MouthamaticCpp.pro ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mksp
 ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mkspecs\features\qt_config.prf:
 ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mkspecs\win32-msvc\qmake.conf:
 ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mkspecs\features\spec_post.prf:
+.qmake.stash:
 ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mkspecs\features\exclusive_builds.prf:
 ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mkspecs\common\msvc-version.conf:
 ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mkspecs\features\toolchain.prf:
@@ -516,7 +517,6 @@ MouthamaticCpp.pro:
 ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\lib\Qt5Sql.prl:
 ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\lib\Qt5Core.prl:
 ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\lib\qtmain.prl:
-.qmake.stash:
 ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\mkspecs\features\build_pass.prf:
 ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\lib\Qt5Widgetsd.prl:
 ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\lib\Qt5Guid.prl:

@@ -9,8 +9,8 @@ SentenceParser::SentenceParser() //Constructor
 
 }
 
-std::vector<Word> SentenceParser::parse(QString& rawSentence){
-    qDebug() << "rawSentence received: " << rawSentence;
+std::vector<Word> SentenceParser::parse(QString rawSentence){
+    qDebug() << "rawSentence received in SentenceParser::parse: " << rawSentence;
 
     QStringList list;
     list = rawSentence.split(QRegExp("\\W+"));
