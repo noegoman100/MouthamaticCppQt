@@ -1,5 +1,6 @@
 #include "dbconnection.h"
 #include "global.h"
+#include <QFileDialog>
 
 
 DBConnection::DBConnection() //default construct definition
@@ -15,11 +16,17 @@ bool DBConnection::connect()
      *  This was done for both MSCV2019_64, and mingw81_64
      *  What a wild goose chase that was!
      */
-    g_db = QSqlDatabase::addDatabase("QMYSQL");
-    g_db.setHostName("phoneme-db.crm7fj6xpwpv.us-west-1.rds.amazonaws.com");
-    g_db.setUserName("appuser");
-    g_db.setPassword("testPassword123");
-    g_db.setDatabaseName("word-to-phoneme");
+    //For AWS MySql connection
+    //g_db = QSqlDatabase::addDatabase("QMYSQL");
+    //g_db.setHostName("phoneme-db.crm7fj6xpwpv.us-west-1.rds.amazonaws.com");
+    //g_db.setUserName("appuser");
+    //g_db.setPassword("testPassword123");
+    //g_db.setDatabaseName("word-to-phoneme");
+
+    //For SQLite connection.
+    g_db = QSqlDatabase::addDatabase("QSQLITE");
+    g_db.setDatabaseName("E:\\SQLiteDB.sqlite");
+    //g_db.setDatabaseName(QFileDialog::getOpenFileUrl(this, ("Choose DB"), QDir::currentPath(), "All Files (*.*)"));
 
     return g_db.open();
 

@@ -14,8 +14,8 @@ MainWindow::MainWindow(QWidget *parent)
     //Uses global dbConnection object, and tries to connect to the database.
     //g_dbConnection returns a boolean, base on db.open()
     //Placed here in the constructor to happen automatically on window creation.
-    //if(g_dbConnection.connect()) { //Uncomment me to connect to database.
-    if(1==0){ //TEMP
+    if(g_dbConnection.connect()) { //Uncomment me to connect to database.
+    //if(1==0){ //TEMP
         QMessageBox::information(this, "Connection", "Database Connected");
     } else {
         QMessageBox::information(this, "Not Connected", "Database Not Connected");
@@ -39,7 +39,8 @@ void MainWindow::on_sendQueryButton_clicked()
 {
     QVector<QString> resultVector{};
     QSqlQuery query;
-    query.exec("SELECT * FROM `word-to-phoneme`.user");
+    //query.exec("SELECT * FROM `word-to-phoneme`.user");
+    query.exec("SELECT * FROM user");
     while(query.next()){
 
         QString result = query.value(1).toString();
