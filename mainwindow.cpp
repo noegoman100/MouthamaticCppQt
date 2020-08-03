@@ -58,8 +58,9 @@ void MainWindow::on_convertDialogButton_clicked()
     qDebug() << "convertDialogButton clicked, with input: " << ui->rawSentenceLineEdit->text();
     rawSentence = ui->rawSentenceLineEdit->text();
 
-    std::vector<Word> convertedDialog = dialogConverter->convert(rawSentence);
-    for (auto& value: convertedDialog){
+    std::vector<Word> allWords = dialogConverter->convert(rawSentence);
+
+    for (auto& value: allWords){ //Verifying the results of the dialogConverter
         qDebug() << "Word Name: " << value.wordName;
         for (auto& subValue1: value.symbols){
             qDebug() << "Symbols: " << subValue1;
