@@ -22,6 +22,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     sentenceparser.cpp \
+    symbolmapper.cpp \
     word.cpp \
     wordparser.cpp
 
@@ -31,6 +32,7 @@ HEADERS += \
     global.h \
     mainwindow.h \
     sentenceparser.h \
+    symbolmapper.h \
     word.h \
     wordparser.h
 

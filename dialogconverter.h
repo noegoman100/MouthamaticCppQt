@@ -6,6 +6,7 @@
 #include <QImage>
 #include "sentenceparser.h"
 #include "wordparser.h"
+#include "symbolmapper.h"
 
 
 class DialogConverter
@@ -17,6 +18,7 @@ public:
 private:
     SentenceParser* sentenceParser = new SentenceParser();
     WordParser* wordParser = new WordParser();
+    SymbolMapper* symbolMapper = new SymbolMapper();
 };
 
 #endif // DIALOGCONVERTER_H
