@@ -29,6 +29,7 @@ public:
     QPushButton *sendQueryButton;
     QPushButton *convertDialogButton;
     QLineEdit *rawSentenceLineEdit;
+    QLabel *imageLabel;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -53,6 +54,9 @@ public:
         rawSentenceLineEdit = new QLineEdit(centralwidget);
         rawSentenceLineEdit->setObjectName(QString::fromUtf8("rawSentenceLineEdit"));
         rawSentenceLineEdit->setGeometry(QRect(20, 10, 401, 20));
+        imageLabel = new QLabel(centralwidget);
+        imageLabel->setObjectName(QString::fromUtf8("imageLabel"));
+        imageLabel->setGeometry(QRect(80, 140, 331, 171));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -70,6 +74,7 @@ public:
         exitButton->setText(QCoreApplication::translate("MainWindow", "Exit Button", nullptr));
         sendQueryButton->setText(QCoreApplication::translate("MainWindow", "Send Query", nullptr));
         convertDialogButton->setText(QCoreApplication::translate("MainWindow", "Convert Dialog", nullptr));
+        imageLabel->setText(QCoreApplication::translate("MainWindow", "TESTING", nullptr));
     } // retranslateUi
 
 };

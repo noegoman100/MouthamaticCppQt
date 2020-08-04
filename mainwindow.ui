@@ -76,6 +76,19 @@
      </rect>
     </property>
    </widget>
+   <widget class="QLabel" name="imageLabel">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>140</y>
+      <width>331</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TESTING</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

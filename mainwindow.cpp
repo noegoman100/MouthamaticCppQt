@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include <iostream>
 #include <string>
+#include <QPixmap>
+#include <QImage>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -69,5 +71,12 @@ void MainWindow::on_convertDialogButton_clicked()
             qDebug() << "imageUrls: " << subValue2;
         }
     }
+
+    //Testing out QPixmap and QLabel to show an image.
+    //QPixmap img(QDir::currentPath() + "/mouth_image_sets/mouth_image_setsMike-LipSet-Layers-AlphaLARGE_08.png");
+    QImage img;
+    img.load(QDir::currentPath() + "/mouth_image_sets/Mike-LipSet-Layers-AlphaLARGE_08.png");
+    //ui->imageLabel->setScaledContents(true);
+    ui->imageLabel->setPixmap(QPixmap::fromImage(img));
 
 }

@@ -1333,21 +1333,7 @@ debug\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		wordparser.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtSql\QSqlQuery \
 		symbolmapper.h \
-		ui_mainwindow.h \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\QVariant \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\QApplication \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\qapplication.h \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtGui\qguiapplication.h \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtGui\qinputmethod.h \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\QLabel \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\qlabel.h \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\QPushButton \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\qpushbutton.h \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\qabstractbutton.h \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\QStatusBar \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\qstatusbar.h \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\QWidget
+		ui_mainwindow.h
 
 debug\sentenceparser.obj: sentenceparser.cpp sentenceparser.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\QDebug \
@@ -1442,10 +1428,9 @@ debug\sentenceparser.obj: sentenceparser.cpp sentenceparser.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtSql\qtsqlglobal.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtSql\qtsql-config.h
 
-debug\symbolmapper.obj: symbolmapper.cpp symbolmapper.h \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\QString \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qstring.h \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qchar.h \
+debug\symbolmapper.obj: symbolmapper.cpp ..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtSql\QSqlQuery \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtSql\qsqlquery.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtSql\qtsqlglobal.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qglobal.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qconfig-bootstrapped.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qconfig.h \
@@ -1467,6 +1452,10 @@ debug\symbolmapper.obj: symbolmapper.cpp symbolmapper.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qmutex.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qnumeric.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qversiontagging.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtSql\qtsql-config.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtSql\qsqldatabase.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qstring.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qchar.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qbytearray.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qrefcount.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qnamespace.h \
@@ -1474,7 +1463,43 @@ debug\symbolmapper.obj: symbolmapper.cpp symbolmapper.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qstringliteral.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qstringalgorithms.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qstringview.h \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qstringbuilder.h
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qstringbuilder.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\QDebug \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qdebug.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qalgorithms.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qhash.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qiterator.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qlist.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qhashfunctions.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qpair.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qvector.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qpoint.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qbytearraylist.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qstringlist.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qregexp.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qstringmatcher.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qmap.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qtextstream.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qiodevice.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qobject.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qobjectdefs.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qcoreevent.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qscopedpointer.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qmetatype.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qobject_impl.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qlocale.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qvariant.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qshareddata.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qset.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qsharedpointer.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		symbolmapper.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\QString
 
 debug\word.obj: word.cpp word.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtGui\qimage.h \

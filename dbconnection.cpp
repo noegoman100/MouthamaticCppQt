@@ -1,6 +1,7 @@
 #include "dbconnection.h"
 #include "global.h"
 #include <QFileDialog>
+#include <QDebug>
 
 
 DBConnection::DBConnection() //default construct definition
@@ -25,9 +26,10 @@ bool DBConnection::connect()
 
     //For SQLite connection.
     g_db = QSqlDatabase::addDatabase("QSQLITE");
-    g_db.setDatabaseName("E:\\SQLiteDB.sqlite");
+    g_db.setDatabaseName(QDir::currentPath() + "/SQLiteDB.sqlite"); //This is not needed for some reason.
     //g_db.setDatabaseName(QFileDialog::getOpenFileUrl(this, ("Choose DB"), QDir::currentPath(), "All Files (*.*)"));
 
+    qDebug() << QDir::currentPath();
     return g_db.open();
 
 }
