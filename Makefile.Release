@@ -610,7 +610,8 @@ release\dbconnection.obj: dbconnection.cpp dbconnection.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qset.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\qcontiguouscache.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtGui\qvector2d.h \
-		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtGui\qtouchdevice.h
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtGui\qtouchdevice.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\QDebug
 
 release\dialogconverter.obj: dialogconverter.cpp dialogconverter.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\QString \
@@ -1332,7 +1333,15 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		wordparser.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtSql\QSqlQuery \
 		symbolmapper.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtGui\QPixmap \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\QLabel \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\qlabel.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\QVBoxLayout \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\qlayout.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtWidgets\qgridlayout.h
 
 release\sentenceparser.obj: sentenceparser.cpp sentenceparser.h \
 		..\..\_Temp\_AppInstalls\Qt\5.15.0\msvc2019_64\include\QtCore\QDebug \

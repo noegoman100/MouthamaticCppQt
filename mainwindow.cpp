@@ -4,6 +4,8 @@
 #include <string>
 #include <QPixmap>
 #include <QImage>
+#include <QLabel>
+#include <QVBoxLayout>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -77,6 +79,23 @@ void MainWindow::on_convertDialogButton_clicked()
     QImage img;
     img.load(QDir::currentPath() + "/mouth_image_sets/Mike-LipSet-Layers-AlphaLARGE_08.png");
     //ui->imageLabel->setScaledContents(true);
-    ui->imageLabel->setPixmap(QPixmap::fromImage(img));
+    //ui->imageLabel->setPixmap(QPixmap::fromImage(img));
+
+
+    //Testing out the imageScrollArea
+    QLabel* newLabel;
+    QVBoxLayout* imageVerticalLayout = new QVBoxLayout();
+    ui->imageScrollArea->setWidget(new QWidget);
+    ui->imageScrollArea->widget()->setLayout(imageVerticalLayout);
+    for (int i = 0; i < 3; i++){
+        newLabel = new QLabel();
+        //newLabel->setFixedHeight()
+        newLabel->setFixedSize(300,200);
+        newLabel->setPixmap(QPixmap::fromImage(img));
+        imageVerticalLayout->addWidget(newLabel);
+        //ui->imageScrollArea->setWidget(newLabel);
+        //qDebug() << ui->imageScrollArea->children();
+    }
+
 
 }

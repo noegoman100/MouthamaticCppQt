@@ -15,6 +15,7 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -30,6 +31,8 @@ public:
     QPushButton *convertDialogButton;
     QLineEdit *rawSentenceLineEdit;
     QLabel *imageLabel;
+    QScrollArea *imageScrollArea;
+    QWidget *scrollAreaWidgetContents;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -57,6 +60,15 @@ public:
         imageLabel = new QLabel(centralwidget);
         imageLabel->setObjectName(QString::fromUtf8("imageLabel"));
         imageLabel->setGeometry(QRect(80, 140, 331, 171));
+        imageScrollArea = new QScrollArea(centralwidget);
+        imageScrollArea->setObjectName(QString::fromUtf8("imageScrollArea"));
+        imageScrollArea->setGeometry(QRect(20, 270, 761, 171));
+        imageScrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+        imageScrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 742, 169));
+        imageScrollArea->setWidget(scrollAreaWidgetContents);
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
