@@ -87,7 +87,7 @@ void MainWindow::on_convertDialogButton_clicked()
     QVBoxLayout* imageVerticalLayout = new QVBoxLayout();
     ui->imageScrollArea->setWidget(new QWidget);
     ui->imageScrollArea->widget()->setLayout(imageVerticalLayout);
-    for (int i = 0; i < 3; i++){
+    for (int i = 0; i < 15; i++){
         newLabel = new QLabel();
         //newLabel->setFixedHeight()
         newLabel->setFixedSize(300,200);
