@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     dbconnection.cpp \
     dialogconverter.cpp \
+    filefetcher.cpp \
     global.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -29,6 +30,7 @@ SOURCES += \
 HEADERS += \
     dbconnection.h \
     dialogconverter.h \
+    filefetcher.h \
     global.h \
     mainwindow.h \
     sentenceparser.h \

@@ -25,14 +25,12 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QLabel *label;
-    QPushButton *exitButton;
-    QPushButton *sendQueryButton;
     QPushButton *convertDialogButton;
     QLineEdit *rawSentenceLineEdit;
-    QLabel *imageLabel;
     QScrollArea *imageScrollArea;
     QWidget *scrollAreaWidgetContents;
+    QLabel *label;
+    QLabel *label_2;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -42,33 +40,27 @@ public:
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        label = new QLabel(centralwidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(710, 560, 81, 16));
-        exitButton = new QPushButton(centralwidget);
-        exitButton->setObjectName(QString::fromUtf8("exitButton"));
-        exitButton->setGeometry(QRect(710, 530, 75, 23));
-        sendQueryButton = new QPushButton(centralwidget);
-        sendQueryButton->setObjectName(QString::fromUtf8("sendQueryButton"));
-        sendQueryButton->setGeometry(QRect(710, 490, 75, 23));
         convertDialogButton = new QPushButton(centralwidget);
         convertDialogButton->setObjectName(QString::fromUtf8("convertDialogButton"));
-        convertDialogButton->setGeometry(QRect(280, 50, 141, 23));
+        convertDialogButton->setGeometry(QRect(640, 50, 141, 23));
         rawSentenceLineEdit = new QLineEdit(centralwidget);
         rawSentenceLineEdit->setObjectName(QString::fromUtf8("rawSentenceLineEdit"));
-        rawSentenceLineEdit->setGeometry(QRect(20, 10, 401, 20));
-        imageLabel = new QLabel(centralwidget);
-        imageLabel->setObjectName(QString::fromUtf8("imageLabel"));
-        imageLabel->setGeometry(QRect(80, 140, 331, 171));
+        rawSentenceLineEdit->setGeometry(QRect(20, 10, 761, 20));
         imageScrollArea = new QScrollArea(centralwidget);
         imageScrollArea->setObjectName(QString::fromUtf8("imageScrollArea"));
-        imageScrollArea->setGeometry(QRect(20, 270, 761, 171));
+        imageScrollArea->setGeometry(QRect(20, 120, 761, 451));
         imageScrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
         imageScrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 742, 169));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 742, 449));
         imageScrollArea->setWidget(scrollAreaWidgetContents);
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(30, 50, 241, 16));
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(410, 100, 361, 16));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -82,11 +74,9 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Hello World!", nullptr));
-        exitButton->setText(QCoreApplication::translate("MainWindow", "Exit Button", nullptr));
-        sendQueryButton->setText(QCoreApplication::translate("MainWindow", "Send Query", nullptr));
         convertDialogButton->setText(QCoreApplication::translate("MainWindow", "Convert Dialog", nullptr));
-        imageLabel->setText(QCoreApplication::translate("MainWindow", "TESTING", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Still needs an Image Set ComboBox", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "Still wants more data: Word Name, Symbol, File Name", nullptr));
     } // retranslateUi
 
 };

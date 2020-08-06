@@ -28,11 +28,16 @@ std::vector<Word> DialogConverter::convert(QString rawSentence){ //Get raw sente
     //Now that we have all the symbols, we will fill in the allWords member vector with the corresponding fileNames.
     for (auto& word: allWords){
         for (int i = 0; i < word.symbols.size(); i++){
-            word.imageUrl.push_back(symbolMapper->mapSymboltoFileName(word.symbols[i], "3"));//get the FileName from the current symbol, add it to the imageURL vector of the same Word.
+            word.imageUrl.push_back(symbolMapper->mapSymboltoFileName(word.symbols[i], "4"));//get the FileName from the current symbol, add it to the imageURL vector of the same Word.
         }
     }
     //We now need to create and load all the image objects and place them into the vertical layout in the User Interface.
-
+    for (auto& word: allWords){
+        for (int i = 0; i < word.imageUrl.size(); i++){
+            //fill allWords with all the QImages.
+            word.imageFile.push_back(fileFetcher->fetchFile(word.imageUrl[i]));
+        }
+    }
 
 
     return allWords;

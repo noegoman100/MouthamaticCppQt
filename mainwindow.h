@@ -25,10 +25,6 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_exitButton_clicked();
-
-    void on_sendQueryButton_clicked();
-
     void on_convertDialogButton_clicked();
 
 private:

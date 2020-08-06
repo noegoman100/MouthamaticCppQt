@@ -7,6 +7,7 @@
 #include "sentenceparser.h"
 #include "wordparser.h"
 #include "symbolmapper.h"
+#include "filefetcher.h"
 
 
 class DialogConverter
@@ -19,6 +20,7 @@ private:
     SentenceParser* sentenceParser = new SentenceParser();
     WordParser* wordParser = new WordParser();
     SymbolMapper* symbolMapper = new SymbolMapper();
+    FileFetcher* fileFetcher = new FileFetcher();
 };
 
 #endif // DIALOGCONVERTER_H
