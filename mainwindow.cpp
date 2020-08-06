@@ -62,6 +62,7 @@ void MainWindow::on_convertDialogButton_clicked()
     qDebug() << "convertDialogButton clicked, with input: " << ui->rawSentenceLineEdit->text();
     rawSentence = ui->rawSentenceLineEdit->text();
 
+    //allWords is the primary data object that will hold all the parsed info about the raw input sentence.
     std::vector<Word> allWords = dialogConverter->convert(rawSentence);
 
     for (auto& value: allWords){ //Verifying the results of the dialogConverter
@@ -74,28 +75,22 @@ void MainWindow::on_convertDialogButton_clicked()
         }
     }
 
-    //Testing out QPixmap and QLabel to show an image.
-    //QPixmap img(QDir::currentPath() + "/mouth_image_sets/mouth_image_setsMike-LipSet-Layers-AlphaLARGE_08.png");
-    QImage img;
-    img.load(QDir::currentPath() + "/mouth_image_sets/Mike-LipSet-Layers-AlphaLARGE_08.png");
-    //ui->imageLabel->setScaledContents(true);
-    //ui->imageLabel->setPixmap(QPixmap::fromImage(img));
 
 
-    //Testing out the imageScrollArea
-    QLabel* newLabel;
-    QVBoxLayout* imageVerticalLayout = new QVBoxLayout();
-    ui->imageScrollArea->setWidget(new QWidget);
-    ui->imageScrollArea->widget()->setLayout(imageVerticalLayout);
-    for (int i = 0; i < 15; i++){
-        newLabel = new QLabel();
-        //newLabel->setFixedHeight()
-        newLabel->setFixedSize(300,200);
-        newLabel->setPixmap(QPixmap::fromImage(img));
-        imageVerticalLayout->addWidget(newLabel);
-        //ui->imageScrollArea->setWidget(newLabel);
-        //qDebug() << ui->imageScrollArea->children();
-    }
+//    //Testing out the imageScrollArea
+//    QImage img(QDir::currentPath() + "/mouth_image_sets/Mike-LipSet-Layers-AlphaLARGE_08.png"); //Create a QImage and load it with a fileName
+//    QLabel* labelPtr; //Create a pointer to a label.
+//    QVBoxLayout* imageVerticalLayout = new QVBoxLayout();
+//    ui->imageScrollArea->setWidget(new QWidget);
+//    ui->imageScrollArea->widget()->setLayout(imageVerticalLayout);
+//    for (int i = 0; i < 15; i++){
+//        labelPtr = new QLabel(); //Possible memory leak. Please investigate. Qt may take care of this.
+//        labelPtr->setFixedSize(300,200);
+//        labelPtr->setPixmap(QPixmap::fromImage(img));
+//        imageVerticalLayout->addWidget(labelPtr);
+//    }
+
+
 
 
 }
