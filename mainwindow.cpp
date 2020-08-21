@@ -7,6 +7,8 @@
 #include <QLabel>
 #include <QVBoxLayout>
 
+QLabel* labelPtr{nullptr}; //Create a pointer to a label. For on_convertDialogButton_clicked()
+QVBoxLayout* imageVerticalLayout{nullptr};//Create a pointer to a VBoxLayout. For on_convertDialogButton_clicked()
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
@@ -34,28 +36,45 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_convertDialogButton_clicked()
 {
-    QString rawSentence = "This is a raw sentence";
+    QString rawSentence = "This is a raw sentence"; //Basic initialization
 
-    qDebug() << "convertDialogButton clicked, with input: " << ui->rawSentenceLineEdit->text();
+    int numObjectsToDelete{0}; //I will use this to loop through and delete all the old objects to prevent memory leak.
+    qDebug() << "convertDialogButton clicked, with input: " << ui->rawSentenceLineEdit->text();  //Verify the function received the input text.
+    if(imageVerticalLayout != nullptr){ //Just looking to see if the count() works. Crashes if it is nullPtr.
+        qDebug() << "previous image count: " << imageVerticalLayout->count();
+        numObjectsToDelete = imageVerticalLayout->count();
+        for (int i = 0; i < numObjectsToDelete; i++){
+            //delete imageVerticalLayout->itemAt(i); //Free up memory used in previous conversion (if any) //Crashes program. Look into QPointer class.
+            //qDebug() << "Deleted object at index: " << i;
+
+            qDebug() << "Object names: " << imageVerticalLayout->itemAt(i)->widget()->objectName();
+        }
+    }
+
+
+
     rawSentence = ui->rawSentenceLineEdit->text();
 
     //allWords is the primary data object that will hold all the parsed info about the raw input sentence.
     std::vector<Word> allWords = dialogConverter->convert(rawSentence);
 
     //Load the image scroll area with the returned images.
-        QLabel* labelPtr; //Create a pointer to a label.
-        QVBoxLayout* imageVerticalLayout = new QVBoxLayout();
-        ui->imageScrollArea->setWidget(new QWidget);
-        ui->imageScrollArea->widget()->setLayout(imageVerticalLayout);
-        for (auto& word: allWords){
-            for (auto& image: word.imageFile){
-                labelPtr = new QLabel(); //Possible memory leak. Please investigate. Qt may take care of this.
-                //labelPtr->setFixedSize(300,200);
-                labelPtr->setPixmap(QPixmap::fromImage(image));
-                imageVerticalLayout->addWidget(labelPtr);
-            }
-
+    //QLabel* labelPtr{nullptr}; //Create a pointer to a label.
+    delete labelPtr; //Free memory, if used.
+    delete imageVerticalLayout; //Free memory, if used.
+    imageVerticalLayout = new QVBoxLayout();
+    ui->imageScrollArea->setWidget(new QWidget);
+    ui->imageScrollArea->widget()->setLayout(imageVerticalLayout);
+    for (auto& word: allWords){
+        for (auto& image: word.imageFile){
+            labelPtr = new QLabel(); //Possible memory leak. Please investigate. Qt may take care of this.
+            //labelPtr->setFixedSize(300,200);
+            labelPtr->setPixmap(QPixmap::fromImage(image));
+            imageVerticalLayout->addWidget(labelPtr); //This layout holds all of the labelPtr pointers.
+            //imageVerticalLayout->   //Maybe cycle through and delete all the Qlabel objects.
         }
+
+    }
 
 //Debugging - Temporary
 //    for (auto& value: allWords){ //Verifying the results of the dialogConverter
