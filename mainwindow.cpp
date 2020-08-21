@@ -7,8 +7,7 @@
 #include <QLabel>
 #include <QVBoxLayout>
 
-QLabel* labelPtr{nullptr}; //Create a pointer to a label. For on_convertDialogButton_clicked()
-QVBoxLayout* imageVerticalLayout{nullptr};//Create a pointer to a VBoxLayout. For on_convertDialogButton_clicked()
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
@@ -38,20 +37,8 @@ void MainWindow::on_convertDialogButton_clicked()
 {
     QString rawSentence = "This is a raw sentence"; //Basic initialization
 
-    int numObjectsToDelete{0}; //I will use this to loop through and delete all the old objects to prevent memory leak.
-    qDebug() << "convertDialogButton clicked, with input: " << ui->rawSentenceLineEdit->text();  //Verify the function received the input text.
-    if(imageVerticalLayout != nullptr){ //Just looking to see if the count() works. Crashes if it is nullPtr.
-        qDebug() << "previous image count: " << imageVerticalLayout->count();
-        numObjectsToDelete = imageVerticalLayout->count();
-        for (int i = 0; i < numObjectsToDelete; i++){
-            //delete imageVerticalLayout->itemAt(i); //Free up memory used in previous conversion (if any) //Crashes program. Look into QPointer class.
-            //qDebug() << "Deleted object at index: " << i;
-
-            qDebug() << "Object names: " << imageVerticalLayout->itemAt(i)->widget()->objectName();
-        }
-    }
-
-
+    QPointer<QLabel> labelPtr{nullptr}; //Create a pointer to a label. For on_convertDialogButton_clicked()
+    QPointer<QVBoxLayout> imageVerticalLayout{nullptr};//Create a pointer to a VBoxLayout. For on_convertDialogButton_clicked()
 
     rawSentence = ui->rawSentenceLineEdit->text();
 
@@ -75,24 +62,5 @@ void MainWindow::on_convertDialogButton_clicked()
         }
 
     }
-
-//Debugging - Temporary
-//    for (auto& value: allWords){ //Verifying the results of the dialogConverter
-//        qDebug() << "Word Name: " << value.wordName;
-//        for (auto& subValue1: value.symbols){
-//            qDebug() << "Symbols: " << subValue1;
-//        }
-//        for (auto& subValue2: value.imageUrl){
-//            qDebug() << "imageUrls: " << subValue2;
-//        }
-//        for (auto& subValue3: value.imageFile){
-//            qDebug() << "Image Exists";
-//        }
-//    }
-
-
-
-
-
 
 }
